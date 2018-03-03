@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>Resource planner</title>
+
+		<!-- Custom styles for this template -->
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div>
+			<button onclick="insertInitialValues()">Insert default values into db</button>
+			<!-- Filter -->
+			<div id="filter">
+				<button id="filter-title" onclick="collapseFilter()" value="0">+ Filter</button>
+				<div id="filter-body">
+					<select id = "teams"></select>
+					<select id = "years"></select>
+					<button onclick="getYearlyTable()">Show</button>
+				</div>
+			</div>
+			<div id="content">
+				<div id="yearly-content" class="hidden">
+				<!-- Yearly table -->
+					<table id="yearly-table">';
+						<caption id="yearly-caption"></caption>
+						<thead id="yearly-head"></thead>
+						<tbody id="yearly-body"></tbody>
+						<tfoot id="yearly-footer"></tfoot>
+					</table>
+				</div>
+				<div id="monthly-content" class="popup">
+				<!-- Monthly table -->
+					<div class="popup-content">
+						<span class="popup-title"></span>
+						<span class="popup-close">&times;</span>
+							<table id="monthly-table">
+							<thead id="monthly-head"></thead>
+							<tbody id="monthly-body"></tbody>
+							<tfoot id="monthly-footer"></tfoot>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script src="js/main-page.js"></script>
+			<script src="js/common.js"></script>
+			<script src="js/initial-data.js"></script>
+			<script src="js/yearly-table.js"></script>
+			<script src="js/monthly-table.js"></script>
+		</div>
+	</body>
+</html>

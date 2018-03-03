@@ -50,7 +50,7 @@ function getYearlyTableBody()
 			// Other cells in row are random percentage numbers
 			var val = toPercent(Math.random());
 			tableRow += '<td>'
-			tableRow += '<div class="clickable content" data-member = "' + cursor.value.name + '" data-month="' + monthList[index].val + '">-</div>'
+			tableRow += '<div class="clickable content" data-member = "' + cursor.value.name + '" data-month="' + monthList[index].val + '">'+ val +'</div>'
 			tableRow += '</td>';
 		}	
 		tableRow += '</tr>';
